@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YAC Investment - Premier Energy and Commodities Solutions</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+
+    <!-- Apple Touch Icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="apple-touch-icon-180x180.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="apple-touch-icon-144x144.png"
+    />
+
+    <!-- Android Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="android-chrome-512x512.png"
+    />
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#7ed321" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+
+    <!-- Theme colors -->
+    <meta name="theme-color" content="#7ed321" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      /* CSS Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      :root {
+        --primary: #1a3a5f;
+        --secondary: #f8b500;
+        --accent: #2c5aa0;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --gray: #6c757d;
+        --transition: all 0.3s ease;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        line-height: 1.6;
+        color: var(--dark);
+        background-color: #fff;
+        overflow-x: hidden;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        color: var(--primary);
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      h2:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background-color: var(--secondary);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--secondary);
+        color: var(--dark);
+        border: none;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn:hover {
+        background-color: #e6a500;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #0f2a47;
+      }
+
+      /* Header Styles */
+      header {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .logo span {
+        color: var(--secondary);
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin-left: 30px;
+      }
+
+      .nav-links a {
+        font-weight: 500;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .nav-links a:hover {
+        color: var(--secondary);
+      }
+
+      .nav-links a:after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--secondary);
+        transition: var(--transition);
+      }
+
+      .nav-links a:hover:after {
+        width: 100%;
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            rgba(26, 58, 95, 0.8),
+            rgba(26, 58, 95, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        color: white;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      /* Services Section */
+      .services {
+        background-color: var(--light);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: var(--transition);
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-icon {
+        background-color: var(--primary);
+        color: white;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+      }
+
+      .service-content {
+        padding: 25px;
+      }
+
+      .service-content h3 {
+        margin-bottom: 15px;
+        color: var(--primary);
+      }
+
+      /* Products Section */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .product-card {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: var(--transition);
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-image {
+        height: 200px;
+        background-color: var(--light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        font-size: 3rem;
+      }
+
+      .product-content {
+        padding: 25px;
+      }
+
+      .product-content h3 {
+        margin-bottom: 15px;
+        color: var(--primary);
+      }
+
+      /* About Section */
+      .about {
+        background-color: var(--light);
+      }
+
+      .about-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .about-content p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Contact Section */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .contact-icon {
+        background-color: var(--primary);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+
+      .contact-form {
+        background-color: var(--light);
+        padding: 30px;
+        border-radius: 8px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: var(--transition);
+      }
+
+      .form-control:focus {
+        border-color: var(--primary);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(26, 58, 95, 0.1);
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--primary);
+        color: white;
+        padding: 60px 0 30px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      .footer-column h3 {
+        color: white;
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+      }
+
+      .footer-column p {
+        opacity: 0.8;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        opacity: 0.8;
+        transition: var(--transition);
+      }
+
+      .footer-links a:hover {
+        opacity: 1;
+        color: var(--secondary);
+        padding-left: 5px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        background-color: var(--secondary);
+        color: var(--dark);
+        transform: translateY(-3px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 0.7;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .hero h1 {
+          font-size: 3rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          padding: 15px 0;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          width: 100%;
+          height: calc(100vh - 70px);
+          background-color: white;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          padding-top: 50px;
+          transition: var(--transition);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links.active {
+          left: 0;
+        }
+
+        .nav-links li {
+          margin: 15px 0;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        section {
+          padding: 60px 0;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .btn {
+          padding: 10px 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html"
+            ><img
+              src="assets/logos/yacinvestment_logo.png"
+              alt="YAC Investement Logo"
+              height="70px"
+          /></a>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>YAC Investment Solutions</h1>
+          <p>
+            Premier energy trading and investment company specializing in
+            petroleum products, mining, commodities, and construction across
+            Africa
+          </p>
+          <a href="#services" class="btn btn-primary">Explore Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2>Our Business Divisions</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-gas-pump"></i>
+            </div>
+            <div class="service-content">
+              <h3>YAC Petroleum</h3>
+              <p>
+                Premier energy trading company specializing in petroleum
+                products across Africa
+              </p>
+              <p>
+                YAC Petroleum is a premier energy trading company specializing
+                in the wholesale supply of petroleum products across Africa.
+                With a robust global network, efficient logistics, and deep
+                market expertise, we empower businesses and industries with
+                reliable fuel solutions to drive economic growth.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-mountain"></i>
+            </div>
+            <div class="service-content">
+              <h3>YAC Mining</h3>
+              <p>
+                Responsible exploration and extraction of valuable natural
+                resources
+              </p>
+              <p>
+                YAC Mining is dedicated to the responsible exploration and
+                extraction of valuable natural resources. We focus on
+                sustainable mining practices that balance profitability with
+                environmental stewardship and community development.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <div class="service-content">
+              <h3>YAC Commodities</h3>
+              <p>
+                Global trade specializing in raw materials and agricultural
+                products
+              </p>
+              <p>
+                YAC Commodities operates at the heart of global trade,
+                specializing in the sourcing, supply, and distribution of
+                essential raw materials and agricultural products. We connect
+                producers and buyers across borders, ensuring efficiency,
+                quality assurance, and timely delivery.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="service-content">
+              <h3>YAC Construction</h3>
+              <p>
+                Innovative infrastructure solutions for modern development needs
+              </p>
+              <p>
+                YAC Construction is building the future through innovative,
+                reliable, and high-quality infrastructure solutions. From roads
+                and commercial buildings to residential developments and
+                industrial facilities, we execute each project with precision
+                and professionalism.
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="service-content">
+              <h3>YAC Trading</h3>
+              <p>Trusted gateway for general trade across multiple sectors</p>
+              <p>
+                YAC Trading serves as a trusted gateway for general trade across
+                multiple sectors. We facilitate the import and export of goods,
+                manage supply chains, and ensure the smooth flow of products
+                from source to market.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+      <div class="container">
+        <h2>Our Products</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px">
+          We supply a wide range of petroleum and energy products to meet your
+          business needs.
+        </p>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <i class="fas fa-car"></i>
+            </div>
+            <div class="product-content">
+              <h3>Gasoline (PMS)</h3>
+              <p>Premium motor spirit for automotive engines</p>
+              <p>
+                Our high-quality gasoline (PMS) is refined to meet international
+                standards, providing optimal performance for all types of
+                gasoline engines. We supply both regular and premium grades to
+                meet your specific requirements.
+              </p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <i class="fas fa-truck"></i>
+            </div>
+            <div class="product-content">
+              <h3>Gas oil (AGO)</h3>
+              <p>Automotive gas oil for diesel engines</p>
+              <p>
+                Automotive Gas Oil (AGO) is specifically formulated for diesel
+                engines, offering excellent fuel efficiency and reduced
+                emissions. Our AGO meets all regulatory standards and is
+                available in various grades.
+              </p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <i class="fas fa-oil-well"></i>
+            </div>
+            <div class="product-content">
+              <h3>Crude oil</h3>
+              <p>Raw petroleum for processing and refining</p>
+              <p>
+                We source and supply high-quality crude oil from various
+                regions, ensuring consistent quality and reliable supply chains.
+                Our crude oil is suitable for various refining processes and
+                industrial applications.
+              </p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <i class="fas fa-fire"></i>
+            </div>
+            <div class="product-content">
+              <h3>LNG / LPG</h3>
+              <p>Liquefied natural gas and propane</p>
+              <p>
+                LNG and LPG solutions for industrial and commercial
+                applications. These clean-burning fuels offer environmental
+                benefits and cost efficiency for power generation, heating, and
+                industrial processes.
+              </p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <i class="fas fa-plane"></i>
+            </div>
+            <div class="product-content">
+              <h3>Jet A1 fuel / Kerosene</h3>
+              <p>Aviation fuel and kerosene products</p>
+              <p>
+                Jet A1 fuel meets international aviation standards for
+                commercial and private aircraft. Our kerosene products are also
+                available for heating, lighting, and other industrial
+                applications.
+              </p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="product-content">
+              <h3>RFO / HFO</h3>
+              <p>Residual fuel oil for industrial use</p>
+              <p>
+                Residual Fuel Oil (RFO) and Heavy Fuel Oil (HFO) are
+                cost-effective solutions for power generation, marine engines,
+                and industrial boilers. We provide various grades to meet
+                specific operational requirements.
+              </p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <i class="fas fa-road"></i>
+            </div>
+            <div class="product-content">
+              <h3>Bitumen</h3>
+              <p>Asphalt binder for road construction</p>
+              <p>
+                High-quality bitumen for road construction, waterproofing, and
+                industrial applications. Our bitumen products meet international
+                standards and are available in various penetration grades.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <h2>About YAC Investment</h2>
+          <p>
+            YAC Investment is a diversified conglomerate with operations
+            spanning petroleum, mining, commodities, construction, and trading
+            across Africa and global markets. Our commitment to excellence,
+            sustainability, and value creation drives our approach to business.
+          </p>
+          <p>
+            With a robust global network, efficient logistics, and deep market
+            expertise, we empower businesses and industries with reliable
+            solutions to drive economic growth. Our focus on sustainable
+            practices ensures we balance profitability with environmental
+            stewardship and community development.
+          </p>
+          <a href="#contact" class="btn btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>
+              We'd love to hear from you. Reach out to us for any inquiries
+              about our services and products.
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4>Our Office</h4>
+                <p>123 Business District, Accra, Ghana</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <p>+233 123 456 789</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>info@yacinvestment.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Send Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  class="form-control"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  class="form-control"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>YAC Investment</h3>
+            <p>
+              Premier energy trading and investment company specializing in
+              petroleum products, mining, commodities, and construction across
+              Africa.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Business Divisions</h3>
+            <ul class="footer-links">
+              <li><a href="#">YAC Petroleum</a></li>
+              <li><a href="#">YAC Mining</a></li>
+              <li><a href="#">YAC Commodities</a></li>
+              <li><a href="#">YAC Construction</a></li>
+              <li><a href="#">YAC Trading</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contact Info</h3>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Business District,
+                Accra, Ghana
+              </li>
+              <li><i class="fas fa-phone"></i> +233 123 456 789</li>
+              <li><i class="fas fa-envelope"></i> info@yacinvestment.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="copyright">
+          <p>&copy; 2023 YAC Investment. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Navigation Toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        hamburger.innerHTML = navLinks.classList.contains("active")
+          ? '<i class="fas fa-times"></i>'
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      });
+
+      // Form Submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const subject = document.getElementById("subject").value;
+          const message = document.getElementById("message").value;
+
+          // In a real application, you would send this data to a server
+          // For this example, we'll just show an alert
+          alert(
+            `Thank you ${name}! Your message has been sent. We'll get back to you soon.`
+          );
+
+          // Reset the form
+          this.reset();
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Header background on scroll
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 100) {
+          header.style.backgroundColor = "rgba(255, 255, 255, 0.95)";
+          header.style.backdropFilter = "blur(10px)";
+        } else {
+          header.style.backgroundColor = "white";
+          header.style.backdropFilter = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
